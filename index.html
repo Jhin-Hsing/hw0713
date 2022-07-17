@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .A,.B,.C,.D,.E,.F,.G{
+            padding-left: 20px;
+            padding-top: 10px;
+            background-color: rgb(77, 74, 74);
+            line-height: 40px;
+            font-size: 25px;
+            font-family: "新細明體";
+            color: white;
+            border-radius: 5px;
+        }
+
+        .A{
+            grid-row: 1/5;
+            grid-column: 1/7;
+        }
+        .B{
+            grid-row: 1/5;
+            grid-column: 11/14;
+        }
+        .C{
+            grid-row: 5/14;
+            grid-column: 1/4;
+        }
+        .D{
+            grid-row: 6/13;
+            grid-column: 5/13;
+            display: grid;
+            padding: 20px;
+            grid-template-columns: repeat( 5,1fr);
+            grid-template-rows: repeat(2,1fr);
+            grid-template-areas:
+            "E E F F F"
+            "E E . G G";
+        }
+
+        .E{grid-area: E;}
+        .F{grid-area: F;}
+        .G{grid-area: G;}
+
+        .E,.F,.G{
+            background-color: rgb(194, 186, 186);
+            font-size: 40px;
+            color: rgb(28, 25, 25);
+            border-radius: 5px;
+        }
+
+
+
+
+        .container{
+            display: grid;
+            grid-template-columns: repeat( 20,1fr);
+            grid-template-rows: repeat(20,1fr);
+            /* background-color: black; */
+            width: 700px;
+            height: 500px;
+            row-gap: 13px;
+
+        }
+
+        button{
+            position: fixed;
+            bottom:0;
+            left:0;
+            border: 2px black solid;
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+            transition-duration: 0.2s;
+            cursor: pointer;
+
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="A">A</div>
+        <div class="B">B</div>
+        <div class="C">C</div>
+        <div class="D">
+            <div class="E">E</div>
+            <div class="F">F</div>
+            <div class="G">G</div>
+        </div>
+    </div>
+
+        <button onclick="document.location='2.html'">第二題</button>
+
+
+</body>
+</html>
